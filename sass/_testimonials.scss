@@ -105,7 +105,7 @@
       right: 115px;
     }
 
-    @include media(">=350px", "<530px") {
+    @include media("<530px") {
       right: 25px;
     }
   }
