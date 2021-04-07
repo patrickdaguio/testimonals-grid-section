@@ -1,29 +1,58 @@
 .container {
   &__box {
     border-radius: 10px;
+    opacity: 0;
 
     &--one {
       background-color: $violet;
       grid-area: container__one;
       position: relative;
+      animation: down 1s forwards;
+      animation-delay: 0.2s;
+      @include media("<530px") {
+        animation: up 1s forwards;
+      }
     }
     &--two {
       background-color: $darkGrayishBlue;
       grid-area: container__two;
+      animation: right 1s forwards;
+      @include media("<530px") {
+        animation: up 1s forwards;
+        animation-delay: 0.1s;
+      }
     }
     &--three {
       background-color: $white;
       grid-area: container__three;
       box-shadow: 10px 10px 40px -12px $lightGray;
+      animation: left 1s forwards;
+      animation-delay: 0.3s;
+      @include media("<530px") {
+        animation: up 1s forwards;
+        animation-delay: 0.4s;
+      }
     }
     &--four {
       background-color: $white;
       grid-area: container__four;
       box-shadow: 22px 32px 52px -54px $darkBlackishBlue;
+      animation: right 1s forwards;
+      animation-delay: 0.4s;
+      @include media("<530px") {
+        animation: up 1s forwards;
+        animation-delay: 0.2s;
+      }
     }
     &--five {
       background-color: $darkBlackishBlue;
       grid-area: container__five;
+      animation: up 1s forwards;
+      animation-delay: 0.4s;
+      @include media("<530px") {
+        animation: up 1s forwards;
+        animation-delay: 0.3s;
+      }
     }
   }
 
